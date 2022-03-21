@@ -1,32 +1,143 @@
- /* ---------- Globale regler ---------- */
+/* ---------- farve variabler ---------- */
+:root {
+  --nav-bgcolor: #e86060;
+  --s1-bgcolor: ;
+  --s2-bgcolor: #e1f6f2;
+  --s3-bgcolor: #d4f2ff;
+  --s4-bgcolor: #ffefd4;
+  --s5-bgcolor: #f8d6ff;
+  --footer-bgcolor: #0c1380;
 
-img{
-    width: 100%;
+  --nav-text-color: #f2f2f2;
+  --s2-heading-color: #47e6c7;
+  --s3-heading-color: #29bfff;
+  --s4-heading-color: #ffbd4d;
+  --s5-heading-color: #e265fb;
+  --footer-text-color: #f2f2f2;
 }
 
+/* ---------- fonter ---------- */
+h1 {
+  color: #141414;
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 6rem;
+}
+
+h2 {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  color: #141414;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+/* ---------- Globale regler ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* NOTE: sætter en øvre grænse på 1024px, så der
+er whitespace ude til siderne, når skærmbredden er
+over 1024px, og 16px når man er på mobil */
+.responsive-grid-layout {
+  display: grid;
+  grid-template-columns: 16px auto minmax(0, 1024px) auto 16px;
+}
+/* placerer alt indhold i den rigtige kolonne */
+.responsive-grid-layout > * {
+  grid-column: 3/4;
+}
+/* NOTE færdig */
+
+section:not(#section_1) {
+  padding-block: 64px;
+}
 
 /* ---------- HEADER ---------- */
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
+#nav-logo {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
+  color: var(--nav-text-color);
+}
+
+#header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--nav-bgcolor);
+}
+
+#nav-list {
+  display: flex;
+  gap: 4rem;
+  place-items: center;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item a,
+#nav-logo {
+  text-decoration: none;
+}
+
+.nav-item a {
+  font-family: bebas-neue-pro, sans-serif;
+  font-size: 1.5rem;
+  color: var(--nav-text-color);
+}
 
 /* ---------- SECTION 1 ---------- */
 
-#section1{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+#section_1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-#section1 div{
-    min-height: 300px;
-    max-height: 1fr;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+#section_1 div {
+  min-height: 300px;
+  max-height: 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 .flip-card {
@@ -41,14 +152,15 @@ body {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateX(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -67,10 +179,204 @@ body {
   transform: rotateX(180deg);
 }
 
+/* ---------- h1_section ---------- */
+
+#h1_section {
+  display: grid;
+  place-items: center center;
+  padding-block: 2rem !important;
+}
+
+#h1_section h1 {
+  width: fit-content;
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-color: #141414;
+  position: absolute;
+}
+
+h1::before {
+  top: 50%;
+  left: -110%;
+}
+
+h1::after {
+  top: 50%;
+  right: -110%;
+}
+
 /* ---------- SECTION 2 ---------- */
+
+#section_2 {
+  background-color: var(--s2-bgcolor);
+}
+
+#section_2 h2 {
+  color: var(--s2-heading-color);
+}
+
+#section_2 video {
+  width: 100%;
+  background-color: black;
+  aspect-ratio: 16/9;
+  margin-bottom: 48px;
+}
+
+#section_2-article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  gap: 32px 90px;
+}
+
+@media screen and (max-width: 800px) {
+  #section_2-article {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
 
 /* ---------- SECTION 3 ---------- */
 
+#section_3 {
+  background-color: var(--s3-bgcolor);
+}
+
+#section_3 h2 {
+  color: var(--s3-heading-color);
+}
+
+.double-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+#price-list {
+  transform: translateX(1rem);
+}
+
+.item-price {
+  margin-block: 0.5rem;
+}
+
 /* ---------- SECTION 4 ---------- */
 
+#section_4 {
+  background-color: var(--s4-bgcolor);
+}
+
+#section_4 h2 {
+  color: var(--s4-heading-color);
+}
+
+.triple-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  gap: 16px;
+}
+
+.event-card img {
+  aspect-ratio: 5/3;
+}
+
+.event-card p {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* ---------- SECTION 5 ---------- */
+
+#section_5 {
+  background-color: var(--s5-bgcolor);
+}
+
+#section_5 h2 {
+  color: var(--s5-heading-color);
+}
+
+#section_5 img {
+  margin-inline: auto;
+  padding-bottom: 24px;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-family: bebas-neue-pro, sans-serif;
+  padding-inline: 2rem;
+  margin-inline: auto;
+  position: relative;
+  max-width: 600px;
+  font-style: italic;
+}
+
+.quote::before,
+.quote::after {
+  position: absolute;
+  color: var(--s5-heading-color);
+  font-size: 4em;
+  top: 33.33%;
+}
+
+.quote::before {
+  content: "“";
+  left: -0.5rem;
+}
+
+.quote::after {
+  content: "”";
+  right: 1rem;
+}
+
 /* ---------- Footer ---------- */
+
+footer {
+  padding-block: 32px;
+  background-color: var(--footer-bgcolor);
+}
+
+h2.footer-title {
+  color: var(--footer-text-color);
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer p {
+  color: var(--footer-text-color);
+  padding-bottom: 1rem;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.icon {
+  aspect-ratio: 1/1;
+  width: 48px;
+  background-size: 100%;
+}
+
+.icon-facebook {
+  background-image: url("images/Circled_Facebook.png");
+}
+
+.icon-instagram {
+  background-image: url("images/Circled_Instagram.png");
+}
+
+.icon-twitter {
+  background-image: url("images/Circled_Twitter.png");
+}
+
+.icon-youtube {
+  background-image: url("images/Circled_Youtube.png");
+}
