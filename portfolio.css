@@ -75,8 +75,7 @@ section:not(#section_1) {
   padding-block: 64px;
 }
 
-
-/** ---------- Header ---------- */ 
+/** ---------- Header ---------- */
 
 header {
   position: sticky;
@@ -102,7 +101,7 @@ header {
 
 #nav-list {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
   place-items: center;
 }
 
@@ -121,41 +120,100 @@ header {
   color: var(--nav-text-color);
 }
 
+#burgermenu {
+  padding: 0.5rem;
+  height: 3rem;
+  aspect-ratio: 1/1;
+  display: grid;
+  align-content: center;
+  place-self: center;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--nav-text-color);
+  display: none;
+  z-index: 20;
+}
 
-/** ---------- Section 1 ---------- */ 
+@media (max-width: 625px) {
+  #burgermenu {
+    display: block;
+  }
+
+  #nav-list {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    margin-top: 5.5rem;
+    gap: 0;
+    background-color: #14141488;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item a {
+    width: 100%;
+    padding-block: 3rem;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .nav-item:nth-child(2n) a {
+    background-color: #14141422;
+  }
+}
+
+/** ---------- Section 1 ---------- */
 
 #section_1 {
-    background-color: #E1F6F2;
-    display: grid;
-    justify-items: center;
-    padding: 5%;
+  background-color: #e1f6f2;
+  display: grid;
+  justify-items: center;
+  padding: 5%;
 }
 
-#section_1 .container{
+#section_1 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 3rem;
+  width: 80%;
 }
-
-video{
+.video-container {
+  position: relative;
   width: 100%;
+  padding-bottom: 56.25%;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /** ---------- Section 2 ---------- */
 
 #section_2 {
-    background-color: #D4F2FF;
-    min-height: 300px;
+  background-color: #d4f2ff;
+  min-height: 300px;
 }
 
 /** ---------- Section 3 ---------- */
 
 #section_3 {
-    background-color: #FFEFD4;
-    min-height: 300px;
+  background-color: #ffefd4;
+  min-height: 300px;
 }
 
 /** ---------- Footer ---------- */
