@@ -222,6 +222,10 @@ header {
   min-height: 300px;
 }
 
+#section_2 img {
+  width: 100%;
+}
+
 /** ---------- Section 3 ---------- */
 
 #section_3 {
