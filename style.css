@@ -122,9 +122,17 @@ header {
 
 /* ---------- SECTION 1 ---------- */
 
+
+@media (min-width: 801px) {
+  #section_1 {
+    --repeat: 3;
+  }
+}
+
 #section_1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(400px, 1fr));
 }
 
 #section_1 div {
