@@ -212,6 +212,7 @@ header {
 @media (min-width: 801px) {
   #section_1 {
     --repeat: 3;
+ 
   }
 }
 
@@ -236,6 +237,7 @@ body {
 .flip-card {
   background-color: transparent;
   perspective: 3000px;
+  aspect-ratio: 1/1;
 }
 
 .flip-card-inner {

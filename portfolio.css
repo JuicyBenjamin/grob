@@ -223,10 +223,13 @@ header {
 #section_2 {
   background-color: #d4f2ff;
   min-height: 300px;
+  display: grid;
+  justify-items: center;
 }
 
 #section_2 img {
-  width: 100%;
+  width: 80vw;
+
 }
 
 /** ---------- Section 3 ---------- */
@@ -235,11 +238,28 @@ header {
   background-color: #ffefd4;
   min-height: 300px;
   display: grid;
- grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
 }
 
 #section_3 img {
+}
 
+/** ---------- Section 4 ---------- */
+
+#section_4 {
+  background-color: #f8d6ff;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+#section_4 img {
+  width: 75%;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+#section_4 h2{
+  padding-bottom: 3%;
 }
 
 /** ---------- Footer ---------- */
