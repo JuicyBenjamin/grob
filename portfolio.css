@@ -1,0 +1,161 @@
+/** ---------- farve variabler ---------- */
+:root {
+  --nav-bgcolor: #e86060;
+  --s1-bgcolor: ;
+  --s2-bgcolor: #e1f6f2;
+  --s3-bgcolor: #d4f2ff;
+  --s4-bgcolor: #ffefd4;
+  --s5-bgcolor: #f8d6ff;
+  --footer-bgcolor: #0c1380;
+
+  --nav-text-color: #f2f2f2;
+  --s2-heading-color: #47e6c7;
+  --s3-heading-color: #29bfff;
+  --s4-heading-color: #ffbd4d;
+  --s5-heading-color: #e265fb;
+  --footer-text-color: #f2f2f2;
+}
+
+/** ---------- fonter ---------- */
+h1 {
+  color: #141414;
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 6rem;
+}
+
+h2 {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+p {
+  color: #141414;
+  padding-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+/** ---------- Globale regler ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* NOTE: sætter en øvre grænse på 1024px, så der
+er whitespace ude til siderne, når skærmbredden er
+over 1024px, og 16px når man er på mobil */
+.responsive-grid-layout {
+  display: grid;
+  grid-template-columns: 16px auto minmax(0, 1024px) auto 16px;
+}
+/* placerer alt indhold i den rigtige kolonne */
+.responsive-grid-layout > * {
+  grid-column: 3/4;
+}
+/* NOTE færdig */
+
+section:not(#section_1) {
+  padding-block: 64px;
+}
+
+
+/** ---------- Header ---------- */ 
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#nav-logo {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3rem;
+  color: var(--nav-text-color);
+}
+
+#header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--nav-bgcolor);
+}
+
+#nav-list {
+  display: flex;
+  gap: 4rem;
+  place-items: center;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item a,
+#nav-logo {
+  text-decoration: none;
+}
+
+.nav-item a {
+  font-family: bebas-neue-pro, sans-serif;
+  font-size: 1.5rem;
+  color: var(--nav-text-color);
+}
+
+
+/** ---------- Section 1 ---------- */ 
+
+#section_1 {
+    background-color: #E1F6F2;
+    display: grid;
+    justify-items: center;
+    padding: 5%;
+}
+
+#section_1 .container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+video{
+  width: 100%;
+}
+
+/** ---------- Section 2 ---------- */
+
+#section_2 {
+    background-color: #D4F2FF;
+    min-height: 300px;
+}
+
+/** ---------- Section 3 ---------- */
+
+#section_3 {
+    background-color: #FFEFD4;
+    min-height: 300px;
+}
+
+/** ---------- Footer ---------- */
