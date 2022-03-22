@@ -183,6 +183,9 @@ header {
   .left {
     order: 1;
   }
+  #section_3 {
+    --repeat: 2;
+  }
 }
 
 #section_1 {
@@ -231,6 +234,12 @@ header {
 #section_3 {
   background-color: #ffefd4;
   min-height: 300px;
+  display: grid;
+ grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+}
+
+#section_3 img {
+
 }
 
 /** ---------- Footer ---------- */
