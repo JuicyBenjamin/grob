@@ -315,11 +315,10 @@ h1::after {
   color: var(--s2-heading-color);
 }
 
-#section_2 video {
+#section_2 .video {
   width: 100%;
-  background-color: black;
   aspect-ratio: 16/9;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 #section_2-article {
