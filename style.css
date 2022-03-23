@@ -365,6 +365,10 @@ h1::after {
 .btn-s3 {
   background-color: var(--s3-heading-color);
 }
+#section_3 h3{
+color: #29bfff;
+
+}
 
 /* ---------- SECTION 4 ---------- */
 
