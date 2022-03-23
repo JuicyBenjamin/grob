@@ -274,7 +274,7 @@ body {
   display: grid;
   place-content: center center;
 }
-.flip-card-back p{
+.flip-card-back p {
   color: #47e6c7;
   font-family: bebas-neue-pro, sans-serif;
   font-size: 1.8rem;
@@ -317,7 +317,7 @@ body {
 }
 
 .flip-card-4 .flip-card-front {
-  background-image: url("images/a\ seat\ kea.webp");
+  background-image: url("images/4kvinder.webp");
   background-size: cover;
   background-position: center center;
 }
