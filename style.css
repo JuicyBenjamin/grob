@@ -222,13 +222,6 @@ header {
   grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
 }
 
-#section_1 div {
-  max-height: 1fr;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -243,14 +236,14 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateX(180deg);
+  transition-delay: 0.1s;
 }
 
 .flip-card-front,
@@ -264,13 +257,76 @@ body {
 
 .flip-card-front {
   background-color: #bbb;
-  color: black;
+  color: #141414;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(150px, 300px) minmax(
+      20px,
+      1fr
+    );
+  grid-template-rows: 1fr 2fr 1fr;
 }
 
 .flip-card-back {
   background-color: #2980b9;
   color: white;
   transform: rotateX(180deg);
+  text-align: center;
+  display: grid;
+  place-content: center center;
+}
+
+.flip-card-text {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  position: relative;
+  place-content: center center;
+}
+
+.flip-card-title,
+.flip-card-desc {
+  font-family: bebas-neue-pro, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.flip-card-desc {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.flip-card-1 .flip-card-front {
+  background-image: url("images/denisova.svg");
+  background-size: cover;
+}
+
+.flip-card-2 .flip-card-front {
+  background-image: url("images/betty-b.webp");
+  background-size: cover;
+}
+
+.flip-card-3 .flip-card-front {
+  background-image: url("images/kinkyclassics.svg");
+  background-size: cover;
+}
+
+.flip-card-4 .flip-card-front {
+  background-image: url("images/a\ seat\ kea.webp");
+  background-size: cover;
+  background-position: center center;
+}
+
+.flip-card-5 .flip-card-front {
+  background-image: url("images/pinkpavillon.svg");
+  background-size: cover;
+}
+
+.flip-card-6 .flip-card-front {
+  background-image: url("images/pink-pavillon.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* ---------- h1_section ---------- */
@@ -325,9 +381,7 @@ h1::after {
 
 #section_2-article {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  gap: 32px 90px;
+  place-content: center center;
 }
 
 @media screen and (max-width: 800px) {
