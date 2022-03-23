@@ -213,17 +213,19 @@ header {
 @media (min-width: 801px) {
   #section_1 {
     --repeat: 3;
+ 
   }
 }
 
 #section_1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
+  
 }
 
 #section_1 div {
-  min-height: 300px;
+  
   max-height: 1fr;
   display: flex;
   justify-content: center;
@@ -237,6 +239,7 @@ body {
 .flip-card {
   background-color: transparent;
   perspective: 3000px;
+  aspect-ratio: 1/1;
 }
 
 .flip-card-inner {
