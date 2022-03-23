@@ -267,12 +267,17 @@ body {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #e1f6f2;
   color: white;
   transform: rotateX(180deg);
   text-align: center;
   display: grid;
   place-content: center center;
+}
+.flip-card-back p{
+  color: #47e6c7;
+  font-family: bebas-neue-pro, sans-serif;
+  font-size: 1.8rem;
 }
 
 .flip-card-text {
