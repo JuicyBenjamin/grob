@@ -329,6 +329,58 @@ body {
   background-position: center center;
 }
 
+@media screen and (max-width: 600px) {
+  .flip-card-1 {
+    order: 1;
+  }
+
+  .flip-card-4 {
+    order: 2;
+  }
+
+  .flip-card-6 {
+    order: 3;
+  }
+
+  .flip-card-3 {
+    order: 4;
+  }
+
+  .flip-card-5 {
+    order: 5;
+  }
+
+  .flip-card-2 {
+    order: 6;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .flip-card-1 {
+    order: 1;
+  }
+
+  .flip-card-4 {
+    order: 2;
+  }
+
+  .flip-card-5 {
+    order: 3;
+  }
+
+  .flip-card-2 {
+    order: 4;
+  }
+
+  .flip-card-3 {
+    order: 5;
+  }
+
+  .flip-card-6 {
+    order: 6;
+  }
+}
+
 /* ---------- h1_section ---------- */
 
 #h1_section {
