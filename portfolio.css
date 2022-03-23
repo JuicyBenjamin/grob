@@ -153,6 +153,10 @@ header {
   width: 80%;
 }
 
+#section_1 h2 {
+  color: #47e6c7;
+}
+
 .video-container {
   position: relative;
   width: 100%;
@@ -180,6 +184,9 @@ header {
   width: 80vw;
 }
 
+#section_2 h2 {
+  color: #29bfff;
+}
 /** ---------- Section 3 ---------- */
 
 #section_3 {
@@ -187,6 +194,10 @@ header {
   min-height: 300px;
   display: grid;
   grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
+}
+
+#section_3 h2 {
+  color: #ffbd4d;
 }
 
 #section_3 img {
@@ -204,6 +215,10 @@ header {
   display: grid;
   justify-items: center;
   justify-content: center;
+}
+
+#section_4 h2 {
+  color: #e265fb;
 }
 
 #section_4 img {
