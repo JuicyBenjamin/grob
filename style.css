@@ -425,6 +425,12 @@ h1::after {
 
 /* ---------- SECTION 4 ---------- */
 
+@media (max-width: 840px) {
+  .triple-columns {
+    --repeat: 1;
+  }
+}
+
 #section_4 {
   background-color: var(--s4-bgcolor);
 }
@@ -435,7 +441,7 @@ h1::after {
 
 .triple-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(256px, 1fr));
   gap: 16px;
 }
 
