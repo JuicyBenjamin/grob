@@ -120,8 +120,6 @@ header {
   color: var(--nav-text-color);
 }
 
-
-
 /** ---------- Section 1 ---------- */
 
 @media (min-width: 800px) {
@@ -189,15 +187,13 @@ header {
   min-height: 300px;
   display: grid;
   grid-template-columns: repeat(var(--repeat, auto-fit), minmax(300px, 1fr));
-
 }
 
-#section_3 img{
+#section_3 img {
   transition: 0.4s;
 }
 
 #section_3 img:hover {
-  
   transform: scale(1.3);
 }
 
