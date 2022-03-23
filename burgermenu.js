@@ -12,10 +12,3 @@ burgermenu.addEventListener("click", () => {
     nav.attributes.removeNamedItem("style");
   }
 });
-
-/*document.addEventListener("scroll", () => {
-  let y = window.scrollY;
-  const header = document.getElementById("header-nav");
-  header.style.backgroundColor = `hsl(${y / 4}, 75%, 64%)`;
-  header.style.transform = `rotateZ(${y}deg) scaleY(${100 + y * 1.1}%)`;
-});*/
