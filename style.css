@@ -365,12 +365,17 @@ h1::after {
 .btn-s3 {
   background-color: var(--s3-heading-color);
 }
-#section_3 h3{
-color: #29bfff;
-
+#section_3 h3 {
+  color: #29bfff;
 }
 
 /* ---------- SECTION 4 ---------- */
+
+@media (max-width: 840px) {
+  .triple-columns {
+    --repeat: 1;
+  }
+}
 
 #section_4 {
   background-color: var(--s4-bgcolor);
@@ -382,7 +387,7 @@ color: #29bfff;
 
 .triple-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(256px, 1fr));
   gap: 16px;
 }
 
