@@ -71,6 +71,7 @@ over 1024px, og 16px når man er på mobil */
 .responsive-grid-layout {
   display: grid;
   grid-template-columns: 16px auto minmax(0, 1024px) auto 16px;
+  scroll-margin-top: 36px;
 }
 /* placerer alt indhold i den rigtige kolonne */
 .responsive-grid-layout > * {
@@ -104,7 +105,7 @@ section:not(#section_1) {
 }
 
 .btn:hover::after {
-  padding-inline: 12px 4px;
+  padding-inline: 16px 0;
 }
 
 /* ---------- HEADER ---------- */
@@ -218,12 +219,13 @@ header {
 
 #section_1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(var(--repeat, auto-fit), minmax(200px, 1fr));
+  
 }
 
 #section_1 div {
-  min-height: 300px;
+  
   max-height: 1fr;
   display: flex;
   justify-content: center;
@@ -386,6 +388,10 @@ color: #29bfff;
   gap: 16px;
 }
 
+.event-card {
+  cursor: pointer;
+}
+
 .event-card img {
   aspect-ratio: 5/3;
 }
@@ -471,17 +477,17 @@ footer p {
 }
 
 .icon-facebook {
-  background-image: url("images/Circled_Facebook.png");
+  background-image: url("images/Circled_Facebook.webp");
 }
 
 .icon-instagram {
-  background-image: url("images/Circled_Instagram.png");
+  background-image: url("images/Circled_Instagram.webp");
 }
 
 .icon-twitter {
-  background-image: url("images/Circled_Twitter.png");
+  background-image: url("images/Circled_Twitter.webp");
 }
 
 .icon-youtube {
-  background-image: url("images/Circled_Youtube.png");
+  background-image: url("images/Circled_Youtube.webp");
 }
